@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timed Site Blocker</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>사이트 차단</h1>
+        <p>정해둔 시간 동안 접속을 막습니다.</p>
+      </header>
+
+      <form id="blockForm" class="form">
+        <label class="field">
+          <span>사이트 주소</span>
+          <input
+            id="siteUrl"
+            name="siteUrl"
+            type="url"
+            inputmode="url"
+            placeholder="https://example.com"
+            required
+            pattern="https://.*"
+          >
+        </label>
+
+        <label class="field">
+          <span>차단 시간</span>
+          <div class="duration">
+            <input
+              id="minutes"
+              name="minutes"
+              type="number"
+              min="1"
+              step="1"
+              value="30"
+              required
+            >
+            <span>분</span>
+          </div>
+        </label>
+
+        <button type="submit" class="primary">차단 시작</button>
+        <p id="status" class="status" role="status"></p>
+      </form>
+
+      <section class="active">
+        <div class="sectionTitle">
+          <h2>차단 중</h2>
+          <button id="refresh" class="ghost" type="button">새로고침</button>
+        </div>
+        <ul id="blockList" class="blockList"></ul>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
