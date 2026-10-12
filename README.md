@@ -28,4 +28,4 @@ chrome 확장프로그램인 "site_blocker"의 코드 입니다.
 
 <br/>
 
-[확장 프로그램링크 추가예정](www.google.com)
+[확장 프로그램링크](https://chromewebstore.google.com/detail/site-locker/oaikiomkoighollhakanpbbpppocdnic?authuser=0&hl=ko)
